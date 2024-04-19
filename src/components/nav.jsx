@@ -38,7 +38,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-white w-fit  dark:bg-gray-900">
+      <nav className="bg-white w-full  dark:bg-gray-900">
         <div className="max-w-screen-xl gap-4 flex flex-row  items-center justify-between mx-auto ">
           <a href="https://www.ssn.edu.in/" className="flex items-center">
             <img
