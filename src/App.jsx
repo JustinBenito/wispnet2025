@@ -1,6 +1,7 @@
 
 import Nav from './components/nav'
 import Hero from './components/hero'
+import Scope from './components/scope'
 function App() {
 
 
@@ -8,6 +9,7 @@ function App() {
     <>
      <Nav />
      <Hero />
+     <Scope />
     </>
   )
 }

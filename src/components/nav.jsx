@@ -25,7 +25,7 @@ const Nav = () => {
   return (
     <>
       <nav className="bg-white border-b-4 border-[#005197] dark:bg-gray-900">
-        <div className="max-w-screen-xl gap-4 flex flex-row  items-center justify-center mx-auto p-4">
+        <div className="max-w-screen-xl gap-4 flex flex-row  items-center justify-between mx-auto p-4">
           <a href="https://www.ssn.edu.in/" className="flex items-center">
             <img
               src="https://www.ssn.edu.in/wp-content/uploads/2019/12/logo.jpg"
@@ -33,8 +33,8 @@ const Nav = () => {
               alt="SSN Logo"
             />
           </a>
-          <div className="flex-col flex text-center">
-            <h1 className="md:text-5xl font-bold text-xl text-[#005197]">
+          <div className="flex-col flex text-center ">
+            <h1 className="lg:text-3xl font-bold md:text-3xl  text-md text-[#005197]">
               Sri Sivasubramaniya Nadar <br />
               College of Engineering
             </h1>
@@ -45,7 +45,7 @@ const Nav = () => {
           <a href="https://signalprocessingsociety.org/community-involvement/seasonal-schools" className="flex items-center">
             <img
               src={Wispnet}
-              className="w-12 md:w-24 "
+              className="w-12 md:w-20 "
               alt="IEEE SPS Logo"
             />
           </a>
@@ -62,13 +62,13 @@ const Nav = () => {
                 <a onClick={()=>{console.log('home')}} className="text-gray-900 dark:text-white hover:underline font-bold capitalize">SPEAKERS</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={openSchedule} href="#" className="text-gray-900 dark:text-white hover:underline font-bold capitalize">ABOUT THE EVENT</a>
+                <a onClick={openSchedule} href="#" className="text-gray-900 dark:text-white hover:underline font-bold capitalize">ABOUT</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
                 <a onClick={onRegister} href="#" className=" text-gray-900 dark:text-white hover:underline font-bold capitalize">REGISTER</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={()=>{console.log('home')}} href="#" className=" text-gray-900 dark:text-white hover:underline font-bold capitalize">HOW TO REACH SSN ?</a>
+                <a onClick={()=>{console.log('home')}} href="#" className=" text-gray-900 dark:text-white hover:underline font-bold capitalize">Contact Us</a>
             </li>
         </ul>
     </div>
