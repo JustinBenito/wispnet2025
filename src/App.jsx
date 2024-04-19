@@ -4,10 +4,10 @@ function App() {
 
 
   return (
-    <>
+    <div className='w-full'>
      <Nav />
      
-    </>
+    </div>
   )
 }
 

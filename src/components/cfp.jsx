@@ -7,7 +7,7 @@ const CFP = () => {
         
       <div className='text-center  border-gray-100 max-w-5xl mx-auto gap-2'
     >
-    <h1 className='text-3xl p-4 font-bold border-b-2 mb-6'>Sponsors</h1>
+    <h1 className='text-3xl p-4 font-bold border-b-2 mb-6'>Call for Papers</h1>
     </div>
 
         <h6 className="text-left">

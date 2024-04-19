@@ -38,8 +38,8 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="bg-white border-b-4 border-[#005197] dark:bg-gray-900">
-        <div className="max-w-screen-xl gap-4 flex flex-row  items-center justify-between mx-auto p-4">
+      <nav className="bg-white w-fit  dark:bg-gray-900">
+        <div className="max-w-screen-xl gap-4 flex flex-row  items-center justify-between mx-auto ">
           <a href="https://www.ssn.edu.in/" className="flex items-center">
             <img
               src="https://www.ssn.edu.in/wp-content/uploads/2019/12/logo.jpg"
@@ -67,28 +67,28 @@ const Nav = () => {
       </nav>
 
       <nav className="bg-[#005197] text-white dark:bg-gray-700">
-    <div className="max-w-screen-xl px-4 py-3 mx-auto  sm:text-base">
-        <ul className="flex flex-row justify-between items-center w-full font-medium  text-sm">
-        <li className='ml-4 text-[10px] md:text-xs  text-center'>
+    <div className="max-w-screen-xl px-4 py-4 mx-auto text-[8px]">
+        <ul className="flex flex-row justify-between items-center w-full font-medium text-[8px] md:text-sm">
+        <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('home')}} href="#" className="text-white dark:text-white hover:underline font-bold capitalize">HOME</a>
             </li>
         
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('about')}} href="#" className="text-white dark:text-white hover:underline font-bold capitalize">ABOUT</a>
             </li>
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('committee')}} href="#"  className="text-white dark:text-white hover:underline font-bold capitalize">COMMITTEE</a>
             </li>
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('timeline')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">KEY DATES</a>
             </li>
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('cfp')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">FOR AUTHORS</a>
             </li>
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={onRegister} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">PREVIOUS EDITIONS</a>
             </li>
-            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+            <li className='ml-4 text-[6px] md:text-xs  text-center'>
                 <a onClick={()=>{setVisible('contact')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">CONTACT US</a>
             </li>
         </ul>
