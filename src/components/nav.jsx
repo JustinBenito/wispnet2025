@@ -1,9 +1,23 @@
 import React, { useState } from 'react';
 import Wispnet from '../assets/Wispnet_Logo_blue.png'
+
+import Hero from '../components/hero'
+import Scope from '../components/scope'
+import Speakers from '../components/speakers'
+import Sponsors from '../components/sponsors'
+import Footer from '../components/footer'
+import About from './about';
+import Committe from './committe';
+import Schedule from './timeline';
+import CFP from './cfp';
+import Contact from './contact';
 const Nav = () => {
 
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const [visible, setVisible]=useState('home')
+
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -18,7 +32,7 @@ const Nav = () => {
   }
 
   const onRegister = () => {
-    window.open("https://forms.gle/3bmMTgevnjDpcYUZA", '_blank')
+    window.open("https://www.wispnet2024.org/home.html", '_blank')
   }
 
 
@@ -52,46 +66,67 @@ const Nav = () => {
         </div>
       </nav>
 
-      <nav className="bg-slate-100 dark:bg-gray-700">
+      <nav className="bg-[#005197] text-white dark:bg-gray-700">
     <div className="max-w-screen-xl px-4 py-3 mx-auto  sm:text-base">
         <ul className="flex flex-row justify-between items-center w-full font-medium  text-sm">
+        <li className='ml-4 text-[10px] md:text-xs  text-center'>
+                <a onClick={()=>{setVisible('home')}} href="#" className="text-white dark:text-white hover:underline font-bold capitalize">HOME</a>
+            </li>
+        
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={()=>{console.log('home')}} className="text-gray-900 dark:text-white hover:underline font-bold capitalize " aria-current="page">HOME</a>
+                <a onClick={()=>{setVisible('about')}} href="#" className="text-white dark:text-white hover:underline font-bold capitalize">ABOUT</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={()=>{console.log('home')}} className="text-gray-900 dark:text-white hover:underline font-bold capitalize">SPEAKERS</a>
+                <a onClick={()=>{setVisible('committee')}} href="#"  className="text-white dark:text-white hover:underline font-bold capitalize">COMMITTEE</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={openSchedule} href="#" className="text-gray-900 dark:text-white hover:underline font-bold capitalize">ABOUT</a>
+                <a onClick={()=>{setVisible('timeline')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">KEY DATES</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={onRegister} href="#" className=" text-gray-900 dark:text-white hover:underline font-bold capitalize">REGISTER</a>
+                <a onClick={()=>{setVisible('cfp')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">FOR AUTHORS</a>
             </li>
             <li className='ml-4 text-[10px] md:text-xs  text-center'>
-                <a onClick={()=>{console.log('home')}} href="#" className=" text-gray-900 dark:text-white hover:underline font-bold capitalize">Contact Us</a>
+                <a onClick={onRegister} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">PREVIOUS EDITIONS</a>
+            </li>
+            <li className='ml-4 text-[10px] md:text-xs  text-center'>
+                <a onClick={()=>{setVisible('contact')}} href="#" className=" text-white dark:text-white hover:underline font-bold capitalize">CONTACT US</a>
             </li>
         </ul>
     </div>
 </nav>
 
-      {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 p-2 transition-opacity ease-in-out">
-          <div className="modal-overlay fixed inset-0 bg-black opacity-50"></div>
+    
 
-          <div className="modal-container flex-col relative  bg-white w-96 mx-auto rounded-lg transition-opacity ease-in-out shadow-lg z-50 p-4">
-          <button
-                className="modal-close absolute font-bold right-2 top-3 mb-4 text-black hover:text-gray-700"
-                onClick={closeModal}
-              >
-                x
-              </button>
-            <div className="modal-content  ">
-              <h2 className="text-2xl font-semibold ">You will be Updated Shortly...</h2>
-            </div>
-          </div>
-        </div>
-      )}
+    { visible=='home' && <>
+    <Hero />
+    <Scope />
+     <Speakers />
+     <Sponsors />
+     </> }
+
+     { visible=='about' && <>
+    <About />
+     </> }
+
+     { visible=='committee' && <>
+    <Committe />
+     </> }
+
+     { visible=='timeline' && <>
+    <Schedule />
+     </> }
+
+     { visible=='cfp' && <>
+    <CFP />
+     </> }
+
+     { visible=='contact' && <>
+    <Contact />
+     </> }
+
+     
+     
+     <Footer />
     </>
   );
 };
