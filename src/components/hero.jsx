@@ -14,6 +14,8 @@ import Heading from './heroheading';
 
 const Hero = () => {
     const AutoplaySlider = withAutoplay(AwesomeSlider);
+    const slider_height = window.screen.height-200
+    console.log(`h-[300px] lg:h-[350px] md:h-[350px] sm:h-[350px] xl:h-[700px] relative z-0`)
 //   return (
 // <div>
     
@@ -143,7 +145,7 @@ interval={2000}
 bullets={false}
 animation="cubeAnimation" 
 
-className='h-[300px] lg:h-[350px] md:h-[350px] sm:h-[350px] xl:h-[650px] relative z-0' >
+className={`h-[300px] lg:h-[350px] md:h-[350px] sm:h-[350px] xl:h-[700px] relative z-0`} >
     <div data-src={img1} />
     <div data-src={img2} />
     <div data-src={img3} />
